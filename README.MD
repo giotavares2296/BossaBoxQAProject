@@ -12,6 +12,4 @@ O framework utilizado para realizar os testes foi o Cypress. Optei em usar o Cyp
 4. Para rodar o projeto  no modo headless execute `npx cypress run` e para rodar com o player iterativo do Cypress execute com `npx cypress open` 
 
 
-Obs: Nao consegui realizar validaçōes das mensagens de erro relacionadas a senha na API pois no dia que realizei o teste a API só me retornava o erro 500 para esse cenário.
-
 Obrigada!
