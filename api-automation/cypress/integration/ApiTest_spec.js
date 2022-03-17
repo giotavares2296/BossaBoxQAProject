@@ -66,4 +66,16 @@ describe('Register Validations ', () => {
                     expect(response.body.error.message).to.be.eq("O e-mail é inválido")
                 })
         })
+        
+        it('Invalid password', () => {
+            cy.request({
+                method: 'POST',
+                url: 'https://drj335kkci.execute-api.sa-east-1.amazonaws.com/dev/v1/users',
+                qs: { fullName: 'Giovana Tavares', password: '', email:randomEmail, logintype:'email' },
+                failOnStatusCode: false
+            })
+                .should((response) => {
+                    expect(response.status).to.eq(400);
+                })
+        })
 });
